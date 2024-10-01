@@ -10,12 +10,12 @@ options(scipen = 999)
 
 setwd("~/Github/data_view")
 
-df_address =read.csv('faucet/data/txlistaddres_celo.csv', 
+df_address =read.csv('faucet/data/txlistaddres_celo2.csv', 
                      colClasses=c("character"),
                      stringsAsFactors=FALSE)
 df_address$X = NULL
 
-df_internal = read.csv('faucet/data/txlistinternal_celo.csv', 
+df_internal = read.csv('faucet/data/txlistinternal_celo2.csv', 
                        colClasses=c("character"),
                        stringsAsFactors=FALSE)
 df_internal$X = NULL
@@ -43,7 +43,7 @@ plot.igraph(graph_plot,
             main = "Transacciones desde el Faucet")
 
 write_graph(graph_plot,
-            file="faucet/data/faucet_celo.graphml",
+            file="faucet/data/faucet_celo2.graphml",
             format= "graphml")
 
 
@@ -56,5 +56,5 @@ df_graph %>%
   geom_point() +
   geom_line()
 
-write.xlsx(df_graph, 'faucet/data/faucet_celo.xlsx')
+write.xlsx(df_graph, 'faucet/data/faucet_celo2.xlsx')
 
