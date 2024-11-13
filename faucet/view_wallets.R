@@ -10,12 +10,12 @@ options(scipen = 999)
 
 setwd("~/Github/data_view")
 
-df_address =read.csv('faucet/data/txlistaddres_celo2.csv', 
+df_address =read.csv('faucet/data/txlistaddres5.csv', 
                      colClasses=c("character"),
                      stringsAsFactors=FALSE)
 df_address$X = NULL
 
-df_internal = read.csv('faucet/data/txlistinternal_celo2.csv', 
+df_internal = read.csv('faucet/data/txlistinternal5.csv', 
                        colClasses=c("character"),
                        stringsAsFactors=FALSE)
 df_internal$X = NULL
@@ -40,10 +40,10 @@ plot.igraph(graph_plot,
             vertex.size = 6,
             edge.arrow.size = 0.1, # tamaño de la flecha
             vertex.color = adjustcolor("SkyBlue2", alpha.f = .5),
-            main = "Transacciones desde el Faucet")
+            main = "Tx Educateth Arbitrum")
 
 write_graph(graph_plot,
-            file="faucet/data/faucet_celo2.graphml",
+            file="faucet/data/faucet_celo5.graphml",
             format= "graphml")
 
 
