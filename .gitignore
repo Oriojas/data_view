@@ -54,3 +54,6 @@ rsconnect/
 *.png
 *.pdf
 *.xlsx
+
+# graph data
+*.graphml
