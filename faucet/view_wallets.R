@@ -43,7 +43,7 @@ plot.igraph(graph_plot,
             main = "Tx Educateth Arbitrum")
 
 write_graph(graph_plot,
-            file="faucet/data/faucet_arb5.graphml",
+            file="faucet/data/faucet_arb6.graphml",
             format= "graphml")
 
 
@@ -52,9 +52,9 @@ df_graph %>%
   group_by(date) %>% 
   summarise(cant=n()) %>% 
   ggplot(aes(x=date, y=cant)) +
-  ggtitle("Interacciones Fauset") +
+  ggtitle("Interacciones Faucet") +
   geom_point() +
   geom_line()
 
-write.xlsx(df_graph, 'faucet/data/faucet_celo5.xlsx')
+write.xlsx(df_graph, 'faucet/data/faucet6.xlsx')
 
